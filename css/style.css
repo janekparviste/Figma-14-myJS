@@ -9,7 +9,7 @@
 }
 
 * {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu {
@@ -72,4 +72,11 @@
 
 .menu-panel.active {
     right: 0;
+}
+
+.closeBtn,
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
 }

@@ -12,6 +12,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .menu {
     width: 100%;
     display: grid;
@@ -79,4 +83,17 @@
     float: right;
     cursor: pointer;
     font-size: 2rem;
+}
+
+.frame {
+    width: 100%;
+    text-align: center;
+}
+
+.frame img {
+    display: inline-block;
+    width: 296px;
+    height: 165px;
+    object-fit: cover;
+    margin: 22px;
 }

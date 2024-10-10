@@ -6,14 +6,37 @@ const frameImage = document.querySelector('#frame');
 const images = ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp'];
 const modal = document.querySelector('.modal');
 const btnOpenModal = document.querySelector('#btn-open-form');
+const inputName = document.querySelector('#name');
+const inputEmail = document.querySelector('#email');
+const inputMessage = document.querySelector('#message');
+const contactForm = document.querySelector('#contact-form');
+
+contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const name = inputName.value;
+    const email = inputEmail.value;
+    const message = inputMessage.value;
+
+    //object literal
+    const formData = {
+        userName: name,
+        userEmail: email,
+        userMessage: message
+    }
+
+    localStorage.setItem("name", JSON.stringify(formData.userName))
+    localStorage.setItem("email", JSON.stringify(formData.userEmail))
+    localStorage.setItem("message", JSON.stringify(formData.userMessage))
+
+    console.log('form submitted');
+});
 
 btnOpenModal.addEventListener('click', () => {
     modal.style.display = 'block';
 });
 
 window.onclick = (event) => {
-    console.log(event.target);
-    if(event.target == modal) {
+    if (event.target == modal) {
         modal.style.display = 'none';
     }
 };
